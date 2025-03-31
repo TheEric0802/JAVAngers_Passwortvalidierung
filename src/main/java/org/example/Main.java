@@ -55,4 +55,8 @@ public class Main {
         }
         return false;
     }
+
+    public static boolean doesPasswordContainSpecialCharacter(String password) {
+        return false;
+    }
 }
