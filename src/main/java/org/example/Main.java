@@ -5,19 +5,21 @@ public class Main {
         System.out.println("Hello, World!");
     }
 
-    public static boolean isPasswordLongEnough(String password) {
+    public static int minPasswordLength = 8;
 
+    public static boolean isPasswordLongEnough(String password) {
+        return password.length() >= minPasswordLength;
     }
 
     public static boolean doesPasswordContainNumber(String password) {
-
+        return false;
     }
 
     public static boolean doesPasswordContainLowercaseAndUppercase(String password) {
-
+        return false;
     }
 
     public static boolean isPasswordCommon(String password) {
-
+        return false;
     }
 }
