@@ -12,6 +12,11 @@ public class Main {
     }
 
     public static boolean doesPasswordContainNumber(String password) {
+        for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
         return false;
     }
 
