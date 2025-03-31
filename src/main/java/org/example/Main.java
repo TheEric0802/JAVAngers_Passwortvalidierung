@@ -48,6 +48,11 @@ public class Main {
     };
 
     public static boolean isPasswordCommon(String password) {
+        for (String commonPassword : commonPasswords) {
+            if (password.equals(commonPassword.toLowerCase())) {
+                return true;
+            }
+        }
         return false;
     }
 }
