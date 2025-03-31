@@ -36,4 +36,9 @@ class MainTest {
     void doesPasswordContainNumber_ShouldReturnTrue_WhenPasswordContainsNumber() {
         assertTrue(Main.doesPasswordContainNumber("password1"));
     }
+
+    @Test
+    void doesPasswordContainNumber_ShouldReturnTrue_WhenPasswordIsNumberOnly() {
+        assertTrue(Main.doesPasswordContainNumber("1234"));
+    }
 }
