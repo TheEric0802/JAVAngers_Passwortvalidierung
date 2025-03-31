@@ -56,4 +56,14 @@ class MainTest {
     void doesPasswordContainLowercaseAndUppercase_ShouldReturnTrue_WhenPasswordIsLowercaseAndUppercase() {
         assertTrue(Main.doesPasswordContainLowercaseAndUppercase("Password"));
     }
+
+    @Test
+    void isPasswordCommon_ShouldReturnTrue_WhenPasswordIsCommon() {
+        assertTrue(Main.isPasswordCommon("password"));
+    }
+
+    @Test
+    void isPasswordCommon_ShouldReturnFalse_WhenPasswordIsNotCommon() {
+        assertFalse(Main.isPasswordCommon("M4ximilian22"));
+    }
 }
