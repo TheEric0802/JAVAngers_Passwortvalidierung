@@ -41,4 +41,19 @@ class MainTest {
     void doesPasswordContainNumber_ShouldReturnTrue_WhenPasswordIsNumberOnly() {
         assertTrue(Main.doesPasswordContainNumber("1234"));
     }
+
+    @Test
+    void doesPasswordContainLowercaseAndUppercase_ShouldReturnFalse_WhenPasswordIsLowercase() {
+        assertFalse(Main.doesPasswordContainLowercaseAndUppercase("password"));
+    }
+
+    @Test
+    void doesPasswordContainLowercaseAndUppercase_ShouldReturnFalse_WhenPasswordIsUppercase() {
+        assertFalse(Main.doesPasswordContainLowercaseAndUppercase("PASSWORD"));
+    }
+
+    @Test
+    void doesPasswordContainLowercaseAndUppercase_ShouldReturnTrue_WhenPasswordIsLowercaseAndUppercase() {
+        assertTrue(Main.doesPasswordContainLowercaseAndUppercase("Password"));
+    }
 }
