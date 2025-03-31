@@ -79,7 +79,6 @@ class MainTest {
 
     @Test
     void generatePassword_ShouldReturnValidPassword() {
-        String password = Main.generatePassword();
-        assertTrue(Main.isValidPassword(password));
+        assertTrue(Main.isValidPassword(Main.generatePassword()));
     }
 }
