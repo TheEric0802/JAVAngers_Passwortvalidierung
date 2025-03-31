@@ -66,4 +66,14 @@ class MainTest {
     void isPasswordCommon_ShouldReturnFalse_WhenPasswordIsNotCommon() {
         assertFalse(Main.isPasswordCommon("M4ximilian22"));
     }
+
+    @Test
+    void doesPasswordContainSpecialCharacter_ShouldReturnFalse_WhenPasswordDoesNotContainSpecialCharacter() {
+        assertFalse(Main.doesPasswordContainSpecialCharacter("password"));
+    }
+
+    @Test
+    void doesPasswordContainSpecialCharacter_ShouldReturnTrue_WhenPasswordContainsSpecialCharacter() {
+        assertTrue(Main.doesPasswordContainSpecialCharacter("password!"));
+    }
 }
