@@ -68,4 +68,8 @@ public class Main {
         }
         return false;
     }
+
+    public static String generatePassword() {
+        return "";
+    }
 }
