@@ -26,4 +26,14 @@ class MainTest {
     void isPasswordLongEnough_ShouldReturnFalse_WhenPasswordIsABC() {
         assertFalse(Main.isPasswordLongEnough("ABC"));
     }
+
+    @Test
+    void doesPasswordContainNumber_ShouldReturnFalse_WhenPasswordDoesNotContainNumber() {
+        assertFalse(Main.doesPasswordContainNumber("password"));
+    }
+
+    @Test
+    void doesPasswordContainNumber_ShouldReturnTrue_WhenPasswordContainsNumber() {
+        assertTrue(Main.doesPasswordContainNumber("password1"));
+    }
 }
