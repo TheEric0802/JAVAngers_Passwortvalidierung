@@ -5,7 +5,7 @@ public class Main {
         System.out.println("Hello, World!");
     }
 
-    public static int minPasswordLength = 8;
+    public static final int minPasswordLength = 8;
 
     public static boolean isPasswordLongEnough(String password) {
         return password.length() >= minPasswordLength;
