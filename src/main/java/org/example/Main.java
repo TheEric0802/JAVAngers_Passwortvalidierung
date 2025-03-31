@@ -72,4 +72,8 @@ public class Main {
     public static String generatePassword() {
         return "";
     }
+
+    public static boolean isValidPassword(String password) {
+        return isPasswordLongEnough(password) && doesPasswordContainNumber(password) && doesPasswordContainLowercaseAndUppercase(password) && !isPasswordCommon(password) && doesPasswordContainSpecialCharacter(password);
+    }
 }

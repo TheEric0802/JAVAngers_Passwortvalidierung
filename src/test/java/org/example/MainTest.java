@@ -80,6 +80,6 @@ class MainTest {
     @Test
     void generatePassword_ShouldReturnValidPassword() {
         String password = Main.generatePassword();
-        assertTrue(Main.isPasswordLongEnough(password) && Main.doesPasswordContainNumber(password) && Main.doesPasswordContainLowercaseAndUppercase(password) && !Main.isPasswordCommon(password) && Main.doesPasswordContainSpecialCharacter(password));
+        assertTrue(Main.isValidPassword(password));
     }
 }
