@@ -21,7 +21,16 @@ public class Main {
     }
 
     public static boolean doesPasswordContainLowercaseAndUppercase(String password) {
-        return false;
+        boolean hasLowercase = false;
+        boolean hasUppercase = false;
+        for (char c : password.toCharArray()) {
+            if (Character.isLowerCase(c)) {
+                hasLowercase = true;
+            } else if (Character.isUpperCase(c)) {
+                hasUppercase = true;
+            }
+        }
+        return hasLowercase && hasUppercase;
     }
 
     public static boolean isPasswordCommon(String password) {
