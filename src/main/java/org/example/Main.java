@@ -69,8 +69,23 @@ public class Main {
         return false;
     }
 
+    public static final String alphabet = "abcdefghijklmnopqrstuvwxyz";
+
     public static String generatePassword() {
-        return "";
+        String validCharacters = alphabet + alphabet.toUpperCase() + "1234567890" + specialCharacters;
+
+        StringBuilder password;
+
+        do {
+            password = new StringBuilder(minPasswordLength);
+
+            for (int i = 0; i < minPasswordLength; i++) {
+                int randomIndex = (int) (Math.random() * validCharacters.length());
+                password.append(validCharacters.charAt(randomIndex));
+            }
+        } while (!isValidPassword(password.toString()));
+
+        return password.toString();
     }
 
     public static boolean isValidPassword(String password) {
